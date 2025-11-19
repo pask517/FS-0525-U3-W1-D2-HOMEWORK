@@ -1,13 +1,25 @@
 import { Container, Col, Row, Card, Button } from "react-bootstrap"
 import Welcome from "./Welcome"
-import horror from "../data/horror.json"
+import horrorBooks from "../data/horror.json"
+import SingleBook from "./SingleBook"
+import fantasyBooks from "../data/fantasy.json"
+import romanceBooks from "../data/romance.json"
+import scifiBooks from "../data/scifi.json"
+import BookList from "./BookList"
 const AllTheBooks = () => {
   return (
     <main>
       <Welcome />
+      <SingleBook
+        title={horrorBooks[0].title}
+        price={horrorBooks[0].price}
+        category={horrorBooks[0].category}
+        img={horrorBooks[0].img}
+      />
+      <BookList array={scifiBooks} />
       <Container>
         <Row>
-          {horror.map((book) => {
+          {horrorBooks.map((book) => {
             return (
               <Col xs={12} md={4} lg={3} className="mb-4" key={book.asin}>
                 <Card className="h-100 ">

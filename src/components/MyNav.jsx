@@ -2,7 +2,7 @@ import { Container, Navbar, Nav } from "react-bootstrap"
 
 const MyNav = () => {
   return (
-    <header>
+    <header className="mb-3">
       <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
         <Container className="ms-5">
           <Navbar.Brand href="#home" className="fs-1 text-primary">
